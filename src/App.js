@@ -7,14 +7,15 @@ import TodoList from './components/TodoList';
 
 const App = () => {
   const [inputText, setInputText] = useState(""); 
+  const [todos, setTodos] = useState([]);
 
   return (
     <div className="App">
       <header>
         My first react-app, a to-do list!
       </header>
-      <Form setInputText={setInputText} />
-      <TodoList />
+      <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText} />
+      <TodoList todos={todos} />
     </div>
   );
 }
