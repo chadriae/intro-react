@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+  padding: 5px;
+}
+header{
+  font-size: 3rem;
+}
+
+Form {
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid black;
+}
+
+.todo-input {
+  margin-bottom: 20px
+}
