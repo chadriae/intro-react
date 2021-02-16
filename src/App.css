@@ -15,3 +15,8 @@ Form {
 .todo-input {
   margin-bottom: 20px
 }
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
