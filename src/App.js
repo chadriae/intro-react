@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './App.scss';
 
 // importing components
 import Form from './components/Form';
@@ -57,7 +57,7 @@ const App = () => {
   return (
     <div className="App">
       <header>
-        My first react-app, a to-do list!
+        Christophe's to do-app
       </header>
       <Form 
         inputText={inputText} 
@@ -66,7 +66,7 @@ const App = () => {
         setInputText={setInputText}
         setStatus={setStatus}
       />
-      <TodoList 
+      <TodoList
         setTodos={setTodos} 
         todos={todos} 
         filteredTodos={filteredTodos}
