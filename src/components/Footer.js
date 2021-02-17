@@ -10,14 +10,13 @@ const Footer = () => {
 
     // random number generator for API request
     const randomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min)) + min; // You can remove the Math.floor if you don't want it to be an integer
+    return Math.floor(Math.random() * (max - min)) + min;
     }
 
     // get inspirational quote
     const setQuote = () => {
         Axios.get("https://type.fit/api/quotes").then((response) => {
             let result = response.data[randomNumber(0, 1643)]
-            console.log(result);
             findQuote('"' + result.text + '"' + " - " + result.author);
         });
     }

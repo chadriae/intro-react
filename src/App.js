@@ -1,4 +1,6 @@
 //TODO: error message when no input
+//TODO: filter uncompleted
+
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Clock from 'react-live-clock';
