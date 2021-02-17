@@ -1,5 +1,9 @@
+//TODO: error message when no input
+
 import React, { useState, useEffect } from 'react';
 import './App.scss';
+import Clock from 'react-live-clock';
+import Axios from 'axios';
 
 // importing components
 import Form from './components/Form';
@@ -53,12 +57,24 @@ const App = () => {
     }
   }
 
+  // get inspirational quote
+  const getQuote = () => {
+    Axios.get("https://type.fit/api/quotes").then((response) => {
+      console.log(response);
+    });
+  }
 
   return (
     <div className="App">
       <header>
-        Christophe's to do-app
+        <Clock format={'dddd'}  />'s todo-list
       </header>
+      <div className="clock">
+        <span className="time-now"><Clock format={'HH:mm:ss'} ticking={true} timezone={'Europe/Brussels'} /></span>
+        <br />
+        <span className="date"><Clock format={'DD-MM-yyyy'}  /></span><br />
+        <button onClick={getQuote}>Click for quote</button>
+      </div>
       <Form 
         inputText={inputText} 
         todos={todos} 
@@ -71,6 +87,7 @@ const App = () => {
         todos={todos} 
         filteredTodos={filteredTodos}
       />
+      <footer>"Some inspirational quote" - S. Author</footer>
     </div>
   );
 }

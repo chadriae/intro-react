@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaRegCheckCircle } from 'react-icons/fa';
+import { FaTrashAlt } from 'react-icons/fa';
 
 const Todo = ({text, setTodos, todos, todo }) => {
     // Events 
@@ -19,9 +21,15 @@ const Todo = ({text, setTodos, todos, todo }) => {
 
     return (
         <div className="todo">
-            <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{text}</li>
-            <button onClick={completeHandler} className="complete-btn">Complete</button>
-            <button onClick={deleteHandler} className="delete-btn">Delete</button>        
+            <li>
+                <span className={`todo-item ${todo.completed ? "completed" : ""}`}>{text}</span>
+                <button onClick={completeHandler}>
+                    <FaRegCheckCircle className="check-button" />
+                </button>
+                <button onClick={deleteHandler}>
+                    <FaTrashAlt className="delete-button" />
+                </button>
+            </li>        
         </div>
    );
 };

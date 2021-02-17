@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaPlusCircle } from 'react-icons/fa';
 
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
 
@@ -22,7 +23,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
         <form className="form">
             <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
-                Add
+              <FaPlusCircle className="add-button" />
             </button>
             <div className="select">
                 <select onChange={statusHandler} className="filter-todo">

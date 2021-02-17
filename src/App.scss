@@ -13,11 +13,6 @@ $text-color: white;
   box-sizing: border-box;
 }
 
-header {
-  font-family: $primary-font;
-  color: $text-color;
-}
-
 body {
   justify-content: center;
   padding: 5px;
@@ -25,12 +20,29 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
-  background-image: url('./images/background.jpeg');
+  background-image: url('./images/background2.jpeg');
 }
 
-header{
-  font-size: 3rem;
+header,
+.clock {
   text-align: center;
+  font-family: $primary-font;
+  color: $text-color;
+}
+
+header {
+  font-size: 4rem;
+  margin-top: 4rem;
+}
+
+footer {
+  text-align: center;
+  font-family: $primary-font;
+  color: $text-color;
+  position: fixed;
+  left: 0;
+  bottom: 2rem;
+  width: 100%;
 }
 
 Form {
@@ -38,20 +50,44 @@ Form {
   margin: 20px;
   border: $border;
   display: flex;
+  text-align: center;
   // background-color: $background-color;
 }
 
+button {
+  background-color: #ffffff00;
+  border: none;
+  cursor: pointer; 
+  color: white;
+}
+
+input:focus{
+  outline: none;
+  opacity: 0.9;
+}
+
+.todo{
+  display: flex;
+  cursor: pointer;
+  :hover{
+    color: #ffffff87;
+  }
+}
+
 .todo-list {
+  text-align: center;
   border: $border;
   font-family: $secondary-font;
   color: $text-color;
+  font-size: 3rem;
+  margin-left: 5rem;
   // background-color: $background-color;
 }
 
 .todo-input {
     margin-top: 2rem;
     height: 2rem;
-    width: 20rem;
+    width: 30rem;
 }
 
 .todo-button {
@@ -72,4 +108,32 @@ Form {
 
 li {
   list-style-type: none;
+}
+
+.time-now{
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+.date{
+  font-size: 2rem;
+}
+
+.add-button {
+  height: 2rem;
+  width: 2rem;
+  :hover {
+    color: #ffffff87;
+  }
+}
+
+.check-button,
+.delete-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  :hover {
+    color: #ffffff87;
+  }
 }
