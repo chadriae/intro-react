@@ -11,6 +11,7 @@ $text-color: white;
 *::before,
 *::after {
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
@@ -31,8 +32,8 @@ header,
 }
 
 header {
-  font-size: 4rem;
-  margin-top: 4rem;
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 
 footer {
@@ -43,11 +44,12 @@ footer {
   left: 0;
   bottom: 2rem;
   width: 100%;
+  font-size: 2rem;
 }
 
 Form {
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 10px;
   border: $border;
   display: flex;
   text-align: center;
@@ -70,7 +72,7 @@ input:focus{
   display: flex;
   cursor: pointer;
   :hover{
-    color: #ffffff87;
+    color: #ffffffac;
   }
 }
 
@@ -87,7 +89,7 @@ input:focus{
 .todo-input {
     margin-top: 2rem;
     height: 2rem;
-    width: 30rem;
+    width: 25rem;
 }
 
 .todo-button {
@@ -111,12 +113,12 @@ li {
 }
 
 .time-now{
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: bold;
 }
 
 .date{
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .add-button {
