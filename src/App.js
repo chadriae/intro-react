@@ -1,5 +1,4 @@
 //TODO: error message when no input
-//TODO: filter uncompleted
 
 import React, { useState, useEffect } from 'react';
 import './App.scss';
@@ -22,11 +21,12 @@ const App = () => {
     getLocalTodos();
   }, [])
 
-  // useEffect
+  // // useEffect
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
   }, [todos, status]);
+
 
   // functions and Events
   const filterHandler = () => {
@@ -35,7 +35,7 @@ const App = () => {
         setFilteredTodos(todos.filter(todo => todo.completed == true));
         break;
       case 'uncompleted':
-        setFilteredTodos(todos.filter(todo => todo.uncompleted == true));
+        setFilteredTodos(todos.filter(todo => todo.completed == false));
         break;
       default:
         setFilteredTodos(todos);
