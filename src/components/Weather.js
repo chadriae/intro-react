@@ -5,13 +5,14 @@ const Weather = () => {
     const [temperature, findTemperature] = useState("");
     const [iconUrl, weatherIcon] = useState("");
 
+    const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
     useEffect(() => {
         showWeather();
     },[])
 
     // get inspirational quote
     const showWeather = () => {
-        Axios.get("http://api.weatherbit.io/v2.0/current?city=ghent,belgium&key=" + process.env.REACT_APP_WEATHER_API_KEY).then((response) => {
+        Axios.get(`http://api.weatherbit.io/v2.0/current?city=ghent,belgium&key=${apiKey}`).then((response) => {
             console.log(response);
             let temperature = response.data.data[0].app_temp;
             let icon = response.data.data[0].weather.icon;
