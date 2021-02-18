@@ -10,6 +10,8 @@ import TodoList from './components/TodoList';
 import Footer from './components/Footer';
 
 const App = () => {
+
+
   // useState
   const [inputText, setInputText] = useState(""); 
   const [todos, setTodos] = useState([]);
@@ -28,6 +30,28 @@ const App = () => {
   }, [todos, status]);
 
 
+  // save to local storage
+  const saveLocalTodos = () => {
+      localStorage.setItem('todos', JSON.stringify(todos));
+  }
+
+  const getLocalTodos = () => {
+    if (localStorage.getItem('todos') === null){
+      // console.log({todos});
+      // localStorage.getItem('todos', JSON.stringify([]));
+      setTodos([]);
+      // JSON.parse(localStorage.getItem('todos')); 
+    }
+    else {
+      // console.log({todos});
+      let todoLocal = JSON.parse(localStorage.getItem('todos'));
+      setTodos(todoLocal);
+      // console.log(localStorage.getItem('todos'));
+      // console.log({todoLocal});
+    }
+  }
+
+
   // functions and Events
   const filterHandler = () => {
     switch(status){
@@ -40,21 +64,6 @@ const App = () => {
       default:
         setFilteredTodos(todos);
         break;
-    }
-  }
-
-  // save to local storage
-  const saveLocalTodos = () => {
-      localStorage.setItem('todos', JSON.stringify(todos));
-  }
-
-  const getLocalTodos = () => {
-    if (localStorage.getItems === null){
-      localStorage.setItem('todos', JSON.stringify([]));
-    }
-    else {
-      let todoLocal = JSON.parse(localStorage.getItem('todos'));
-      setTodos(todoLocal);
     }
   }
 
