@@ -3,15 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Clock from 'react-live-clock';
-
 // importing components
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 import Footer from './components/Footer';
+import Weather from './components/Weather';
 
 const App = () => {
-
-
   // useState
   const [inputText, setInputText] = useState(""); 
   const [todos, setTodos] = useState([]);
@@ -71,6 +69,7 @@ const App = () => {
         <span className="time-now"><Clock format={'HH:mm:ss'} ticking={true} timezone={'Europe/Brussels'} /></span>
         <br />
         <span className="date"><Clock format={'DD-MM-yyyy'}  /></span><br />
+        <Weather />
       </div>
       <Form 
         inputText={inputText} 

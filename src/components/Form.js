@@ -2,9 +2,6 @@ import React from 'react';
 import { FaPlusCircle } from 'react-icons/fa';
 
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
-    
-    console.log(todos);
-    
     const inputTextHandler = (event) => {
         setInputText(event.target.value);
     };
