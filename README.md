@@ -15,6 +15,6 @@ I admit: I used a YouTube tutorial to get the core concepts of React and to buil
 - Quotes Free Api for inspirational quotes
 - Netlify
 
-And huge thanks to Dev Ed for the tutorial.
+And huge thanks to [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q) for the tutorial.
 
-Netlify link over [here](https://eager-curran-e99705.netlify.app/).
+Netlify link over [here](https://jovial-bartik-c28c0c.netlify.app/).

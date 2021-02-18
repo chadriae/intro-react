@@ -37,17 +37,11 @@ const App = () => {
 
   const getLocalTodos = () => {
     if (localStorage.getItem('todos') === null){
-      // console.log({todos});
-      // localStorage.getItem('todos', JSON.stringify([]));
       setTodos([]);
-      // JSON.parse(localStorage.getItem('todos')); 
     }
     else {
-      // console.log({todos});
       let todoLocal = JSON.parse(localStorage.getItem('todos'));
       setTodos(todoLocal);
-      // console.log(localStorage.getItem('todos'));
-      // console.log({todoLocal});
     }
   }
 
