@@ -95,7 +95,15 @@ input:focus{
 .todo-button {
   margin-top: 2rem;
   margin-right: 1rem;
+  :hover {
+    color: #ffffff87;
+  }
 }
+.add-button {
+  height: 2rem;
+  width: 2rem;
+}
+
 
 .filter-todo {
   margin-top: 2rem;
@@ -121,13 +129,6 @@ li {
   font-size: 1rem;
 }
 
-.add-button {
-  height: 2rem;
-  width: 2rem;
-  :hover {
-    color: #ffffff87;
-  }
-}
 
 .check-button,
 .delete-button {

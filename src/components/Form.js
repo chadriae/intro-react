@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPlusCircle } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     const inputTextHandler = (event) => {
@@ -21,9 +22,14 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     return (
         <form className="form">
             <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
-            <button onClick={submitTodoHandler} className="todo-button" type="submit">
+            <motion.button 
+                onClick={submitTodoHandler} 
+                className="todo-button" 
+                type="submit"
+                whileHover={{ scale: 1.1 }}
+                >
               <FaPlusCircle className="add-button" />
-            </button>
+            </motion.button>
             <div className="select">
                 <select onChange={statusHandler} className="filter-todo">
                     <option value="all">All</option>
