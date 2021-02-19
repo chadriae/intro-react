@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Clock from 'react-live-clock';
-import { motion } from 'framer-motion';
 
 // importing components
 import Form from './components/Form';
@@ -45,7 +44,6 @@ const App = () => {
     }
   }
 
-
   // functions and Events
   const filterHandler = () => {
     switch(status){
@@ -62,7 +60,6 @@ const App = () => {
   }
 
   return (
-
     <div className="App">
       <header>
         <Clock format={'dddd'} />'s to do-list
