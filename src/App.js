@@ -8,7 +8,7 @@ import Clock from 'react-live-clock';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 import Footer from './components/Footer';
-import Weather from './components/Weather';
+// import Weather from './components/Weather';
 
 const App = () => {
   // useState
@@ -68,7 +68,7 @@ const App = () => {
         <span className="time-now"><Clock format={'HH:mm:ss'} ticking={true} timezone={'Europe/Brussels'} /></span>
         <br />
         <span className="date"><Clock format={'DD-MM-yyyy'}  /></span><br />
-        <Weather />
+        {/* <Weather /> */}
       </div>
       <Form 
         inputText={inputText} 
