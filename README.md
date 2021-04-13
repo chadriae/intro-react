@@ -17,4 +17,4 @@ I admit: I used a YouTube tutorial to get the core concepts of React and to buil
 
 And huge thanks to [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q) for the tutorial.
 
-Netlify link over [here](https://jovial-bartik-c28c0c.netlify.app/).
+Netlify link over [here](https://elastic-rosalind-199071.netlify.app/).
